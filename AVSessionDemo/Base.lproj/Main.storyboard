@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAJ-iK-Sjb">
+                                <rect key="frame" x="180" y="116" width="240" height="195"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RecordingBkg.png" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-zj-JgL">
+                                        <rect key="frame" x="33" y="34" width="89" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="89" id="msg-T1-yP0"/>
+                                            <constraint firstAttribute="height" constant="128" id="nfD-mQ-fbe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWx-VW-x2l">
+                                        <rect key="frame" x="130" y="64" width="43" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="43" id="FZx-Le-bRn"/>
+                                            <constraint firstAttribute="height" constant="98" id="moC-Yk-G7P"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="Bq5-Ej-pcM"/>
+                                    <constraint firstItem="aKd-zj-JgL" firstAttribute="top" secondItem="lAJ-iK-Sjb" secondAttribute="top" constant="34" id="Hlf-Tc-eL7"/>
+                                    <constraint firstItem="iWx-VW-x2l" firstAttribute="top" secondItem="lAJ-iK-Sjb" secondAttribute="top" constant="64" id="JaG-fY-PGZ"/>
+                                    <constraint firstItem="aKd-zj-JgL" firstAttribute="leading" secondItem="lAJ-iK-Sjb" secondAttribute="leading" constant="33" id="XBk-9M-ryc"/>
+                                    <constraint firstAttribute="width" constant="240" id="b3o-2r-ApR"/>
+                                    <constraint firstItem="iWx-VW-x2l" firstAttribute="leading" secondItem="aKd-zj-JgL" secondAttribute="trailing" constant="8" id="s5T-OD-Drp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUE-bc-gcY">
+                                <rect key="frame" x="97" y="401" width="163" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="录音"/>
+                                <connections>
+                                    <action selector="recordBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="Gng-pF-2na"/>
+                                    <action selector="recordBtnCancle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7x-Hp-6vQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-mx-izl">
+                                <rect key="frame" x="328" y="401" width="163" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="playBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KE-yk-jU9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hAF-mx-izl" firstAttribute="width" secondItem="HUE-bc-gcY" secondAttribute="width" id="NAW-w7-EOt"/>
+                            <constraint firstAttribute="trailing" secondItem="hAF-mx-izl" secondAttribute="trailing" constant="109" id="RDQ-TQ-2SR"/>
+                            <constraint firstItem="hAF-mx-izl" firstAttribute="leading" secondItem="HUE-bc-gcY" secondAttribute="trailing" constant="68" id="euA-sp-bKE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HUE-bc-gcY" secondAttribute="bottom" constant="169" id="fPY-Px-MRh"/>
+                            <constraint firstItem="HUE-bc-gcY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="97" id="kXu-DZ-ceA"/>
+                            <constraint firstItem="lAJ-iK-Sjb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lq8-FQ-elF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hAF-mx-izl" secondAttribute="bottom" constant="169" id="sOr-Kg-yIQ"/>
+                            <constraint firstItem="lAJ-iK-Sjb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="w8H-qk-ubk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="voiceImgView" destination="iWx-VW-x2l" id="Yxp-1H-7Qw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="277"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RecordingBkg.png" width="36" height="99"/>
+    </resources>
+</document>
